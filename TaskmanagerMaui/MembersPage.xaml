@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TaskmanagerMaui"
+             x:Class="TaskmanagerMaui.MembersPage"
+             Title="Members"
+             BackgroundColor="White">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Search"
+                     IconImageSource="searchh.png" />
+    </ContentPage.ToolbarItems>
+
+    <!-- Title Section -->
+    <Grid Padding="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Frame BackgroundColor="Black"
+               CornerRadius="20"
+               HeightRequest="70"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="Start"
+               Grid.Row="0"
+               HasShadow="False">
+            <Label Text="C P S A   Members"
+                   TextColor="White"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontSize="19"
+                   />
+        </Frame>
+
+        <ScrollView Grid.Row="1">
+            <StackLayout Padding="10">
+                <Frame CornerRadius="10"
+                       Padding="10"
+                       HasShadow="True"
+                       Margin="0,0,0,10">
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="lead.png"
+                                   WidthRequest="40"
+                                   HeightRequest="40"
+                                   Aspect="AspectFill"
+                                   VerticalOptions="Center"/>
+                            <StackLayout VerticalOptions="Center"
+                                         HorizontalOptions="FillAndExpand"
+                                         Margin="10,0">
+                                <Label Text="Hesan Nemati"
+                                       FontSize="16"
+                                       FontAttributes="Bold"/>
+                                <Label Text="Lead"
+                                       TextColor="Green"
+                                       FontSize="14"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="profilethree.png"
+                                   WidthRequest="40"
+                                   HeightRequest="40"
+                                   Aspect="AspectFill"
+                                   VerticalOptions="Center"/>
+                            <StackLayout VerticalOptions="Center"
+                                         HorizontalOptions="FillAndExpand"
+                                         Margin="10,0">
+                                <Label Text="Sajjad Sharify"
+                                       FontSize="16"
+                                       FontAttributes="Bold"/>
+                                <Label Text="Programmer"
+                                       FontSize="14"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="profiletwo.png"
+                                   WidthRequest="40"
+                                   HeightRequest="40"
+                                   Aspect="AspectFill"
+                                   VerticalOptions="Center"/>
+                            <StackLayout VerticalOptions="Center"
+                                         HorizontalOptions="FillAndExpand"
+                                         Margin="10,0">
+                                <Label Text="Pedram BaniArdalan"
+                                       FontSize="16"
+                                       FontAttributes="Bold"/>
+                                <Label Text="Programming Master"
+                                       TextColor="#006d77"
+                                       FontSize="14"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <!-- Repeat above Frame for each member -->
+
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Add Member Button -->
+        <Button Text="+"
+                FontSize="30"
+                BackgroundColor="Black"
+                TextColor="green"
+                WidthRequest="60"
+                HeightRequest="60"
+                CornerRadius="30"
+                VerticalOptions="End"
+                HorizontalOptions="End"
+                Margin="0,0,20,20"
+                Grid.Row="2"/>
+    </Grid>
+</ContentPage>

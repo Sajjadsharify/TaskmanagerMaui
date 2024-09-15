@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="TaskmanagerMaui.NewMember">
+    <VerticalStackLayout>
+        <Frame>
+            <StackLayout
+                Orientation="Vertical">
+                <Entry
+                    x:Name="TaskNameEntry"
+                    Placeholder="Name"
+                    PlaceholderColor="White"
+                    FontSize="20"
+                    HorizontalTextAlignment="Center"/>
+
+                <Frame
+                    BackgroundColor="#DDA0DD"
+                    WidthRequest="350"
+                    CornerRadius="24">
+                    <Entry
+                         x:Name="MemberEntry"
+                         Placeholder="MemberId"
+                         PlaceholderColor="White"
+                         FontSize="20"
+                         HorizontalTextAlignment="Center"/>
+                </Frame>
+
+                <!--dedline-->
+                <Frame
+                    x:Name="Dedline">
+                    <Grid>
+                        <DatePicker
+                        MinimumDate="{Binding MinDate}"
+                        MaximumDate="{Binding MaxDate}"
+                        Date="{Binding SelectedDate}"
+                        HorizontalOptions="Center"/>
+                        <TimePicker
+                            Time="{Binding SelectedTime}" />
+                    </Grid>
+
+                </Frame>
+                <Frame
+                    BackgroundColor="#DDA0DD"
+                    WidthRequest="350"
+                    CornerRadius="24">
+                    <Entry
+                        x:Name="CostEntry"
+                        Placeholder="Cost"
+                        PlaceholderColor="White"
+                        Keyboard="Numeric"
+                        FontSize="20"
+                        HorizontalTextAlignment="Center"/>
+                </Frame>
+                <Frame
+                    BackgroundColor="#DDA0DD"
+                    WidthRequest="350"
+                    CornerRadius="24">
+                    <Entry
+                        x:Name="time"
+                        />
+                </Frame>
+                <!--prerequistes-->
+
+
+                <!--couple-->
+                <Picker 
+                        x:Name="picker"
+                        Title="Select a task">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>task1</x:String>
+                            <x:String>task2</x:String>
+                            <x:String>task3</x:String>
+                            <x:String>task4</x:String>
+                            <x:String>task5</x:String>
+                            <x:String>task6</x:String>
+                            <x:String>task7</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <!--manager-->
+
+
+                <!--previous-->
+                <Picker
+                x:Name="picker"
+                Title="select a previos task">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>task1</x:String>
+                            <x:String>task2</x:String>
+                            <x:String>task3</x:String>
+                            <x:String>task4</x:String>
+                            <x:String>task5</x:String>
+                            <x:String>task6</x:String>
+                            <x:String>task7</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <!--next task-->
+                <Picker
+                    x:Name="picker"
+                    Title="select next task">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>task1</x:String>
+                            <x:String>task2</x:String>
+                            <x:String>task3</x:String>
+                            <x:String>task4</x:String>
+                            <x:String>task5</x:String>
+                            <x:String>task6</x:String>
+                            <x:String>task7</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Frame
+                    BackgroundColor="#DDA0DD"
+                    WidthRequest="350"
+                    CornerRadius="24">
+                    <Entry
+                        x:Name="TaskDescriptionEntry"
+                        />
+                </Frame>
+                <Frame
+                    BackgroundColor="#DDA0DD"
+                    WidthRequest="350"
+                    CornerRadius="24">
+                    <Entry
+                        x:Name=""
+                        />
+                </Frame>
+
+            </StackLayout>
+        </Frame>
+    </VerticalStackLayout>
+</toolkit:Popup>
